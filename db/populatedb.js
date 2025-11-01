@@ -26,7 +26,7 @@ CREATE TABLE user_messages (
 */
 
 const client = new Client({
-    connectionString: 'postgresql://postgres:oKDoXWGnpqUrkVmNQZjdkoBUkarmlCbA@shortline.proxy.rlwy.net:24703/railway'
+    connectionString: 'postgresql://postgres:SRdABQPJPEPSgerYKfoGEQhrTiGWOviG@shuttle.proxy.rlwy.net:23284/railway'
 });
 
 client.connect(console.log('Seeding...'))

@@ -1,7 +1,7 @@
 const {Pool} = require('pg');
 
 const pool = new Pool({
-    connectionString: 'postgresql://postgres:oKDoXWGnpqUrkVmNQZjdkoBUkarmlCbA@shortline.proxy.rlwy.net:24703/railway'
+    connectionString: 'postgresql://postgres:SRdABQPJPEPSgerYKfoGEQhrTiGWOviG@shuttle.proxy.rlwy.net:23284/railway'
 });
 
 async function createUser(first_name, last_name, email, password) {
