@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h2>New Message</h2>
+    <p style="color: red;"><%= locals.error %></p>
+    <form method="post">
+        Title: <br>
+        <input type="text" name="title"> <br><br>
+        Message: <br>
+        <input type="text" name="message"> <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h2>Profile Details: </h2>
+    <ul>
+        <li>First Name: <%= user.first_name %></li>
+        <li>Last Name: <%= user.last_name %></li>
+        <li>Email: <%= user.email %></li>
+        <li>Is Member: <%= user.member %></li>
+        <li>Is Admin: <%= user.admin %></li>
+    </ul>
+    <a href="/update-membership"><button>Join The Club!</button></a> |
+    <a href="/update-admin"><button>Join As Admin!</button></a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h2>Log In</h2>
+    <% if(error) { %>
+        <p style="color: red;"><%= error[error.length-1] %></p>
+    <% } %>
+    <form action="login" method="post">
+        Username: <br>
+        <input type="email" name="username" autofocus> <br><br>
+        Password: <br>
+        <input type="password" name="password" autofocus> <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <p>New to the site then Sign Up <a href="/sign-up">here</a>.</p>
+</body>
+</html>

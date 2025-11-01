@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <a href="/new-message"><button>New Message</button></a> |
+    <a href="/profile"><button>Profile</button></a> |
+    <a href="/logout"><button>Log Out</button></a>
+    <h2>Messages: </h2>
+    <% messages.forEach(async message => { %>
+        <hr>
+        <ul>
+            <% if (user.member || user.admin) { %>
+                <li>Name: <%= message.user.first_name %> <%= message.user.last_name %> <% if (message.user.admin) { %> (Admin) <% } %></li>
+                <li>Email: <%= message.user.email %></li>
+            <% } %>
+            <li>Title: <%= message.title %></li>
+            <li>Message: <%= message.message %></li>
+            <% if (user.member || user.admin) { %>
+                <li>Date Added: <%= message.date_added %></li>
+            <% } %>
+            <% if (user.admin) { %>
+                <li><a href="delete-message/<%= message.id %>"><button>Delete</button></a></li>
+            <% } %>
+        </ul>
+        <hr>
+    <% }) %>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Admin</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h2>Update Admin Status</h2>
+    <p style="color: red;"><%= locals.error %></p>
+    <form method="post">
+        Password: <br>
+        <input type="password" name="password"> <br><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <h2>Sign Up</h2>
+    <p style="color: red;"><%= locals.error %></p>
+    <form method="post">
+        First name: <br>
+        <input type="text" name="first_name"> <br><br>
+        Last Name: <br>
+        <input type="text" name="last_name"> <br> <br>
+        Email: <br>
+        <input type="email" name="username"> <br><br>
+        Password: <br>
+        <input type="password" name="password"> <br><br>
+        Confirm Password: <br>
+        <input type="password" name="confirm_password"> <br><br>
+        <button>Sign Up</button>
+    </form>
+    <p>Already Signed Up then Log in <a href="/login">here</a>.</p>
+</body>
+</html>
