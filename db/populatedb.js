@@ -1,12 +1,7 @@
 const { Client } = require('pg');
 
 const SQL = `
-    SELECT * FROM user_messages;
-`;
-
-
-/* 
-CREATE TABLE users (
+    CREATE TABLE users (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     first_name VARCHAR (255) NOT NULL,
     last_name VARCHAR (255) NOT NULL,
@@ -23,10 +18,15 @@ CREATE TABLE user_messages (
     date_added VARCHAR (255) NOT NULL,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE NOT NULL
 );
+`;
+
+
+/* 
+
 */
 
 const client = new Client({
-    connectionString: 'postgresql://postgres:1234@localhost:5432/top_users'
+    connectionString: 'postgresql://postgres:oKDoXWGnpqUrkVmNQZjdkoBUkarmlCbA@shortline.proxy.rlwy.net:24703/railway'
 });
 
 client.connect(console.log('Seeding...'))
