@@ -8,7 +8,7 @@ const bcrypt = require('bcryptjs');
 
 const app = express();
 
-app.use(session({ secret: 'cats', resave: false, saveUninitialized: false }));
+app.use(session({ secret: 'cats', resave: false, saveUninitialized: false, cookie: {maxAge: 1000 * 60 * 60 * 336} }));
 app.use(passport.session());
 app.use(express.urlencoded({extended: true}));
 
